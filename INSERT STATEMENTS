@@ -1,0 +1,442 @@
+-- BEGIN INSERTS 
+
+-- Inserting  into the CUSTOMER table
+INSERT INTO CUSTOMER (CUSTOMER_ID, CUSTOMER_NAME, package_ID, STREET, CITY, STATE, ZIP,Fav_channel)
+VALUES ('001', 'John Doe', 'Movies Galore', '123 Main St', 'New York', 'NY', '12345','2a');
+
+INSERT INTO CUSTOMER (CUSTOMER_ID, CUSTOMER_NAME, package_ID, STREET, CITY, STATE, ZIP,Fav_channel)
+VALUES ('002', 'Jane Smith', 'News Globe', '456 Oak St', 'Los Angeles', 'CA', '67890','1b');
+
+INSERT INTO CUSTOMER (CUSTOMER_ID, CUSTOMER_NAME, package_ID, STREET, CITY, STATE, ZIP,Fav_channel)
+VALUES ('003', 'Bob Johnson', 'Total Watcher', '789 Pine St', 'Dallas', 'TX', '54321','10c');
+
+INSERT INTO CUSTOMER (CUSTOMER_ID, CUSTOMER_NAME, package_ID, STREET, CITY, STATE, ZIP,Fav_channel)
+VALUES ('004', 'Alice Johnson', 'Couch Potato', '987 Cedar St', 'Miami', 'FL', '13579','9d');
+
+INSERT INTO CUSTOMER (CUSTOMER_ID, CUSTOMER_NAME, package_ID, STREET, CITY, STATE, ZIP,Fav_channel)
+VALUES ('005', 'Charlie Brown', 'Movies Galore', '654 Elm St', 'Sacramento', 'CA', '98765','8a');
+
+INSERT INTO CUSTOMER (CUSTOMER_ID, CUSTOMER_NAME, package_ID, STREET, CITY, STATE, ZIP,Fav_channel)
+VALUES ('006', 'Eva Green', 'Movies Galore', '321 Birch St', 'Ohio', 'OH', '24680','7b');
+
+INSERT INTO CUSTOMER(CUSTOMER_ID, CUSTOMER_NAME, package_ID, STREET, CITY, STATE, ZIP,Fav_channel)
+VALUES ('007', 'David White', 'News Globe', '135 Walnut St', 'Chicago', 'IL', '86420','6c');
+
+INSERT INTO CUSTOMER(CUSTOMER_ID, CUSTOMER_NAME, package_ID, STREET, CITY, STATE, ZIP,Fav_channel)
+VALUES ('008', 'Grace Miller', 'Total Watcher', '246 Maple St', 'Phoniex', 'AZ', '97531','5d');
+
+INSERT INTO CUSTOMER (CUSTOMER_ID, CUSTOMER_NAME, package_ID, STREET, CITY, STATE, ZIP,Fav_channel)
+VALUES ('009', 'Frank Wilson', 'Couch Potato', '789 Oak St', 'Washington', 'WA', '12340','4a');
+
+INSERT INTO CUSTOMER (CUSTOMER_ID, CUSTOMER_NAME, package_ID, STREET, CITY, STATE, ZIP,Fav_channel)
+VALUES ('010', 'Helen Davis', 'News Globe', '654 Pine St', 'Atlanta', 'GA', '67890','3b');
+
+INSERT INTO CUSTOMER (CUSTOMER_ID, CUSTOMER_NAME, package_ID, STREET, CITY, STATE, ZIP,Fav_channel)
+VALUES ('011', 'George Taylor', 'News Globe', '321 Cedar St', 'Charlotte', 'NC', '54321','2c');
+
+INSERT INTO CUSTOMER (CUSTOMER_ID, CUSTOMER_NAME, package_ID, STREET, CITY, STATE, ZIP,Fav_channel)
+VALUES ('012', 'Ivy Turner', 'Total Watcher', '987 Elm St', 'Colorado', 'CO', '13579','1d' );
+
+-- Billing --
+-- 001 John Doe
+INSERT INTO BILLING (CUSTOMER_ID, Package_ID, BILLING_DATE, AMOUNT, STATUS,Sign_Up)
+VALUES ('001', 'Movies Galore', '2023-01-01', 50.00, 'active','2023-12-01');
+
+-- 002 Jane Smith
+INSERT INTO BILLING (CUSTOMER_ID, Package_ID, BILLING_DATE, AMOUNT, STATUS,Sign_Up)
+VALUES ('002', 'News Globe', '2023-01-01', 40.00, 'active','2023-12-01');
+
+-- 003 Bob Johnson
+INSERT INTO BILLING (CUSTOMER_ID, Package_ID, BILLING_DATE, AMOUNT, STATUS,Sign_Up)
+VALUES ('003', 'Total Watcher', '2023-01-01', 60.00, 'active','2023-12-01');
+
+-- 004 Alice Johnson
+INSERT INTO BILLING (CUSTOMER_ID, Package_ID, BILLING_DATE, AMOUNT, STATUS,Sign_Up)
+VALUES ('004', 'Couch Potato', '2023-01-01', 30.00, 'active','2023-12-01');
+
+-- 005 Charlie Brown
+INSERT INTO BILLING (CUSTOMER_ID, Package_ID, BILLING_DATE, AMOUNT, STATUS,Sign_Up)
+VALUES ('005', 'Movies Galore', '2023-01-01', 50.00, 'inactive','2023-12-01');
+
+-- 006 Eva Green
+INSERT INTO BILLING (CUSTOMER_ID, Package_ID, BILLING_DATE, AMOUNT, STATUS,Sign_Up)
+VALUES ('006', 'Movies Galore', '2023-01-01', 50.00, 'active','2023-12-01');
+
+-- 007 David White
+INSERT INTO BILLING (CUSTOMER_ID, Package_ID, BILLING_DATE, AMOUNT, STATUS,Sign_Up)
+VALUES ('007', 'News Globe', '2023-01-01', 40.00, 'inactive','2023-12-01');
+
+-- 008 Grace Miller
+INSERT INTO BILLING (CUSTOMER_ID, Package_ID, BILLING_DATE, AMOUNT, STATUS,Sign_Up)
+VALUES ('008', 'Total Watcher', '2023-01-01', 60.00, 'active','2023-12-01');
+
+-- 009 Frank Wilson
+INSERT INTO BILLING (CUSTOMER_ID, Package_ID, BILLING_DATE, AMOUNT, STATUS,Sign_Up)
+VALUES ('009', 'Couch Potato', '2023-01-01', 30.00, 'inactive','2023-12-01');
+
+-- 010 Helen Davis
+INSERT INTO BILLING (CUSTOMER_ID, Package_ID, BILLING_DATE, AMOUNT, STATUS,Sign_Up)
+VALUES ('010', 'News Globe', '2023-01-01', 40.00, 'active','2023-12-01');
+
+-- 011 George Taylor
+INSERT INTO BILLING (CUSTOMER_ID, Package_ID, BILLING_DATE, AMOUNT, STATUS,Sign_Up)
+VALUES ('011', 'News Globe', '2023-01-01', 40.00, 'active','2023-12-01');
+
+-- 012 Ivy Turner
+INSERT INTO BILLING (CUSTOMER_ID, Package_ID, BILLING_DATE, AMOUNT, STATUS,Sign_Up)
+VALUES ('012', 'Total Watcher', '2023-01-01', 60.00, 'inactive','2023-12-01');
+
+-- SUPPLIERS
+
+INSERT INTO Network
+VALUES
+('nbc','10880 Wilshire Blvd # 1200 Los Angeles, CA','Jeff King','310) 369-5231');
+
+INSERT INTO Network
+VALUES
+('abc','3702 W Oak Street Burbank, CA','Jeff King','(310) 840-9966');
+
+INSERT INTO Network
+VALUES
+('fox','10960 Wilshire Blvd Los Angeles, CA','Janis Carmikel','(310) 235-5233');
+
+INSERT INTO Network
+VALUES
+('warner','3701 W Oak St Burbank CA','Simon Philips','(310)532-6588');
+
+
+
+-- SUPPLIER LIST
+-- NBC Programs
+INSERT INTO Program_List (Program_ID, Program_name, Length, Short_description, channel_type, Rating_code, release_date)
+VALUES ('nbc1', 'Starry Wars the Trilogy', '120', 'Science Fiction epic about the generation of a brave new world', 'Entertainment', 'Mature', '2023-12-31');
+
+INSERT INTO Program_List (Program_ID, Program_name, Length, Short_description, channel_type, Rating_code, release_date)
+VALUES ('nbc2', 'Gomer Piles the Hero', '30', 'Comedy showing the advantages of being an army sergeant', 'Entertainment', 'Parental Guidance', '2023-12-31');
+
+INSERT INTO Program_List (Program_ID, Program_name, Length, Short_description, channel_type, Rating_code, release_date)
+VALUES ('nbc3', 'Twinkle Toes in Paris', '60', 'Romantic Drama about a Scottish Ballet Dancer making his fortune', 'Entertainment', 'Mature', '2023-12-31');
+
+INSERT INTO Program_List (Program_ID, Program_name, Length, Short_description, channel_type, Rating_code, release_date)
+VALUES ('nbc4', 'Segall in New York', '90', 'Horror Action: Terrorists have taken over New York Cemetery. Can it be brought back under control?', 'Entertainment', 'Restricted – Adults Only', '2023-12-31');
+
+-- ABC Programs
+INSERT INTO Program_List (Program_ID, Program_name, Length, Short_description, channel_type, Rating_code, release_date)
+VALUES ('abc1', 'Fantasia', '120', 'Disney Favorite', 'Entertainment', 'Kids', '2023-12-31');
+
+INSERT INTO Program_List (Program_ID, Program_name, Length, Short_description, channel_type, Rating_code, release_date)
+VALUES ('abc2', 'Dances with Fairies', '90', 'New age movie showing the interaction of humans in the afterlife', 'Entertainment', 'Mature', '2023-12-31');
+
+INSERT INTO Program_List (Program_ID, Program_name, Length, Short_description, channel_type, Rating_code, release_date)
+VALUES ('abc3', 'Speed 34', '120', 'The Space Shuttle is taken over by aliens. Bruce Willis to fix the problem', 'Entertainment', 'Mature', '2023-12-31');
+
+INSERT INTO Program_List (Program_ID, Program_name, Length, Short_description, channel_type, Rating_code, release_date)
+VALUES ('abc4', 'Prettier Women', '120', 'Drama A woman learns to deal with the truth in her life', 'Entertainment', 'Parental-Guidance', '2023-12-31');
+
+-- FOX Programs
+INSERT INTO Program_List (Program_ID, Program_name, Length, Short_description, channel_type, Rating_code, release_date)
+VALUES ('fox1', 'Unreal News tonight', '60', 'FFN specializes in fabricating sensational stories', 'News', 'Mature', '2023-12-31');
+
+INSERT INTO Program_List (Program_ID, Program_name, Length, Short_description, channel_type, Rating_code, release_date)
+VALUES ('fox2', 'SpecSphere live', '120', 'SNS thrives on speculative, unverified, and outrageous news stories', 'News', 'Parental Guidance', '2023-12-31');
+
+INSERT INTO Program_List (Program_ID, Program_name, Length, Short_description, channel_type, Rating_code, release_date)
+VALUES ('fox3', 'Twist and Turn', '60', 'CNC blends real news with fictional elements', 'News', 'Parental Guidance', '2023-12-31');
+
+INSERT INTO Program_List (Program_ID, Program_name, Length, Short_description, channel_type, Rating_code, release_date)
+VALUES ('fox4', 'Questionable Insights', '120', 'IDB presents biased news, relying on unreliable sources', 'News', 'Kids', '2023-12-31');
+
+-- Warner Programs
+INSERT INTO Program_List (Program_ID, Program_name, Length, Short_description, channel_type, Rating_code, release_date)
+VALUES ('warner1', 'Beyond Belief Bulletin', '75', 'FFN crafts fantastical stories', 'News', 'Kids', '2023-12-31');
+
+INSERT INTO Program_List (Program_ID, Program_name, Length, Short_description, channel_type, Rating_code, release_date)
+VALUES ('warner2', 'Reality Remix', '90', 'SSC specializes in speculative reporting', 'News', 'Mature', '2023-12-31');
+
+INSERT INTO Program_List (Program_ID, Program_name, Length, Short_description, channel_type, Rating_code, release_date)
+VALUES ('warner3', 'Fables Unveiled tonight', '80', 'CCB mixes real news with fictional elements', 'News', 'Parerntal Guidance', '2023-12-31');
+
+INSERT INTO Program_List (Program_ID, Program_name, Length, Short_description, channel_type, Rating_code, release_date)
+VALUES ('warner4', 'Questionable Quotient', '120', 'IIN presents biased news', 'News', 'Kids', '2023-12-31');
+
+-- NBC Programs
+INSERT INTO Program_List (Program_ID, Program_name, Length, Short_description, channel_type, Rating_code, release_date)
+VALUES ('nbc5', 'GlamourGossip', '75', 'Join the glitterati with GlamourGossip Gala', 'Lifestyle', 'Kids', '2023-12-31');
+
+INSERT INTO Program_List (Program_ID, Program_name, Length, Short_description, channel_type, Rating_code, release_date)
+VALUES ('nbc6', 'Escapades Extravaganza', '60', 'Indulge in the world of culinary fantasy with Epicurean Escapades Extravaganza', 'Lifestyle', 'Parerntal Guidance', '2023-12-31');
+
+INSERT INTO Program_List (Program_ID, Program_name, Length, Short_description, channel_type, Rating_code, release_date)
+VALUES ('nbc7', 'AdventureChic ', '90', 'Explore the unreal adventures of AdventureChic Chronicles', 'Lifestyle', 'Mature', '2023-12-31');
+
+INSERT INTO Program_List (Program_ID, Program_name, Length, Short_description, channel_type, Rating_code, release_date)
+VALUES ('nbc8', 'LuxeLiving Legends', '120', 'Step into the opulent realm of LuxeLiving Legends', 'Lifestyle', 'Kids', '2023-12-31');
+
+-- ABC Programs
+INSERT INTO Program_List (Program_ID, Program_name, Length, Short_description, channel_type, Rating_code, release_date)
+VALUES ('abc5', 'Chic Retreats ', '90', 'Explore luxurious getaways with Chic Retreats Unveiled.', 'Lifestyle', 'Parerntal Guidance', '2023-12-31');
+
+INSERT INTO Program_List (Program_ID, Program_name, Length, Short_description, channel_type, Rating_code, release_date)
+VALUES ('abc6', 'Gourment Grandeur ', '60', 'Indulge in culinary fantasy with Gourmet Grandeur Gala', 'Lifestyle', 'Mature', '2023-12-31');
+
+
+
+-- PACKAGE
+INSERT INTO Package ( Package_ID,Package_name,Channel_num ,TYPE,package_sold ,Price)
+Values 
+('1',' Movies galore','1,2,3,6,7,9', 'Movie,News,Lifestyle,Documentary,Sports ','3','30.00');
+
+INSERT INTO Package( Package_ID,Package_name,Channel_num ,TYPE,package_sold ,Price)
+Values
+('2',' News Globe','1,3,4,6,7,9', 'Movie,News,Lifestyle,Documentary,Sports','4','30.00');
+
+INSERT INTO Package( Package_ID,Package_name,Channel_num ,TYPE,package_sold ,Price)
+Values
+('3',' Total Watcher','1,2,3,6,7,8,9,10', 'Movie,News,Lifestyle,Documentary,Sports','3','40.00');
+
+INSERT INTO Package( Package_ID,Package_name,Channel_num ,TYPE,package_sold ,Price)
+Values
+('4',' Couch Potato','1,2,3,4,5,6,7,8,9,10', 'Movie,News,Lifestyle,Documentary,Sports','2','40.00');
+
+-- Channel
+
+INSERT INTO Channel(channel_ID,program_ID,short_description, program_name, audience_rating, show_time,release_date)
+VALUES ('1a','nbc', 'Science Fiction epic about the generation of a brave new world', 'Starry wars the trilogy', 'Mature audiences recommended', '1:00am', '2023-12-31');
+
+INSERT INTO Channel(channel_ID, program_ID,short_description, program_name, audience_rating, show_time,release_date)
+VALUES ('1b','nbc',  'Comedy showing the advantages of being an army sergeant', 'Gomer Piles the Hero', 'Parental Guidance', '5:30am', '2023-12-31');
+
+INSERT INTO Channel(channel_ID,program_ID, short_description, program_name, audience_rating, show_time,release_date)
+VALUES ('1c','nbc',  'Romantic Drama about a Scottish Ballet Dancer making his fortune', 'Twinkle Toes in Paris', 'Mature Audiences Recommended', '2:00pm', '2023-12-31');
+
+INSERT INTO Channel(channel_ID,program_ID, short_description, program_name, audience_rating, show_time,release_date)
+VALUES ('1d', 'nbc', 'Horror Action: Terrorists have taken over New York Cemetery. Can it be brought back under control?', 'Segall in New York', 'Restricted – Adults Only', '5:00pm', '2023-12-31');
+
+INSERT INTO Channel(channel_ID,program_ID, short_description, program_name, audience_rating, show_time,release_date)
+VALUES ('2a','abc',  'Disney Favorite', 'Fantasia', 'kids', '1:55am', '2023-12-31');
+
+INSERT INTO Channel(channel_ID, program_ID,short_description, program_name, audience_rating, show_time,release_date)
+VALUES ('2b', 'abc','New age movie showing the interaction of humans in the afterlife', 'Dances with Fairies', 'Mature Audiences Recommended', '4:30am', '2023-12-31');
+
+INSERT INTO Channel(channel_ID, program_ID,short_description, program_name, audience_rating, show_time,release_date)
+VALUES ('2c', 'abc','The Space Shuttle is taken over by aliens. Bruce Willis to fix the problem', 'Speed 34', 'Mature', '8:30pm', '2023-12-31');
+
+INSERT INTO Channel(channel_ID,program_ID, short_description, program_name, audience_rating, show_time,release_date)
+VALUES ('2d', 'abc','Drama A woman learns to deal with the truth in her life', 'Prettier Women', 'Parental-Guidance', '11:30pm', '2023-12-31');
+
+INSERT INTO Channel(channel_ID, program_ID,short_description, program_name, audience_rating, show_time,release_date)
+VALUES ('3a', 'fox','FFN specializes in fabricating sensational stories', 'Unreal News tonight', 'Mature', '1:30am', '2023-12-31');
+
+INSERT INTO Channel(channel_ID,program_ID, short_description, program_name, audience_rating, show_time,release_date)
+VALUES ('3b', 'fox','SNS thrives on speculative, unverified, and outrageous news stories', 'SpecSphere live', 'Parental Guidance', '6:30am', '2023-12-31');
+
+INSERT INTO Channel(channel_ID,program_ID, short_description, program_name, audience_rating, show_time,release_date)
+VALUES ('3c', 'fox','CNC blends real news with fictional elements', 'Twist and Turn', 'Parental Guidance', '7:00pm', '2023-12-31');
+
+INSERT INTO Channel(channel_ID,program_ID, short_description, program_name, audience_rating, show_time,release_date)
+VALUES ('3d','fox', 'IDB presents biased news, relying on unreliable sources', 'Questionable Insights', 'kids', '11:00pm', '2023-12-31');
+
+INSERT INTO Channel(channel_ID, program_ID,short_description, program_name, audience_rating, show_time,release_date)
+VALUES ('4a', 'warner','FFN crafts fantastical stories', 'Beyond Belief Bulletin', 'Kids', '3:45pm', '2023-12-31');
+
+INSERT INTO Channel(channel_ID,program_ID, short_description, program_name, audience_rating, show_time,release_date)
+VALUES ('4b','warner', 'SSC specializes in speculative reporting', 'Reality Remix', 'Mature', '9:15am', '2023-12-31');
+
+INSERT INTO Channel(channel_ID, program_ID,short_description, program_name, audience_rating, show_time,release_date)
+VALUES ('4c','warner', 'CCB mixes real news with fictional elements', 'Fables Unveiled tonight', 'Parerntal Guidance', '5:20pm', '2023-12-31');
+
+INSERT INTO Channel(channel_ID,program_ID, short_description, program_name, audience_rating, show_time,release_date)
+VALUES ('4d', 'warner','IIN presents biased news', 'Questionable Quotient', 'kids', '8:40pm', '2023-12-31');
+
+INSERT INTO Channel(channel_ID,program_ID, short_description, program_name, audience_rating, show_time,release_date)
+VALUES ('5a','nbc', 'Join the glitterati with GlamourGossip Gala', 'GlamourGossip', 'kids', '2:45pm', '2023-12-31');
+
+INSERT INTO Channel(channel_ID,program_ID, short_description, program_name, audience_rating, show_time,release_date)
+VALUES ('5b', 'nbc','Indulge in the world of culinary fantasy with Epicurean Escapades Extravaganza', 'Escapades Extravaganza', 'Parerntal Guidance', '6:45am', '2023-12-31');
+
+INSERT INTO Channel(channel_ID,program_ID, short_description, program_name, audience_rating, show_time,release_date)
+VALUES ('5c','nbc','Explore the unreal adventures of AdventureChic Chronicles', 'AdventureChic ', 'Mature', '4:30pm', '2023-12-31');
+
+INSERT INTO Channel(channel_ID, program_ID,short_description, program_name, audience_rating, show_time,release_date)
+VALUES ('5d','nbc', 'Step into the opulent realm of LuxeLiving Legends', 'LuxeLiving Legends', 'kids', '9:00pm', '2023-12-31');
+
+INSERT INTO Channel(channel_ID,program_ID, short_description, program_name, audience_rating, show_time,release_date)
+VALUES ('6a', 'abc',' Explore luxurious getaways with Chic Retreats Unveiled.', 'Chic Retreats ', 'Parerntal Guidance', '2:00pm', '2023-12-31');
+
+INSERT INTO Channel(channel_ID, program_ID,short_description, program_name, audience_rating, show_time,release_date)
+VALUES ('6b', 'abc','Indulge in culinary fantasy with Gourmet Grandeur Gala', 'Gourment Grandeur ', 'Mature', '5:30am', '2023-12-31');
+
+INSERT INTO Channel(channel_ID, program_ID,short_description, program_name, audience_rating, show_time,release_date)
+VALUES ('6c','abc', 'Discover unreal cityscapes and futuristic living on Urban Oasis Odyssey', 'Urban Odyssey', 'Parerntal Guidance', '4:45pm', '2023-12-31');
+
+INSERT INTO Channel(channel_ID,program_ID, short_description, program_name, audience_rating, show_time,release_date)
+VALUES ('6d','abc', 'Dive into the glitzy world of fashion with CelebStyle Showdown', 'CelebStyle', 'Parerntal Guidance', '9:15pm', '2023-12-31');
+
+INSERT INTO Channel(channel_ID,program_ID, short_description, program_name, audience_rating, show_time,release_date)
+VALUES ('7a','fox', 'Explore fictional tales of hidden truths in the world of cryptocurrencies', 'CryptoConspiracies Chronicles', 'kids', '11:45am', '2023-12-31');
+
+INSERT INTO Channel(channel_ID,program_ID, short_description, program_name, audience_rating, show_time,release_date)
+VALUES ('7b','fox', 'Delve into a world of extraterrestrial encounters and UFO mysteries in Alien Antics Archives.', 'Alien Antics Archives', 'kids', '1:45pm', '2023-12-31');
+
+INSERT INTO Channel(channel_ID, program_ID,short_description, program_name, audience_rating, show_time,release_date)
+VALUES ('7c','fox', 'Uncover speculative mysteries behind ancient civilizations', 'Ancient Wonders Whodunnit', 'kids', '3:15pm', '2023-12-31');
+
+INSERT INTO Channel(channel_ID,program_ID, short_description, program_name, audience_rating, show_time,release_date)
+VALUES ('7d','fox', 'Witness extraordinary accounts of time travel and historical anomalies in Time-Travelers Tales', 'Time-Traveler Tales', 'Parerntal Guidance', '6:00pm', '2023-12-31');
+
+INSERT INTO Channel(channel_ID,program_ID, short_description, program_name, audience_rating, show_time,release_date)
+VALUES ('8a','warner', 'Dive into the mysterious world of urban legends and unexplained phenomena.', 'Urban Legends Unleashed', 'kids', '2:15pm', '2023-12-31');
+
+INSERT INTO Channel(channel_ID,program_ID, short_description, program_name, audience_rating, show_time,release_date)
+VALUES ('8b','warner', 'Embark on expeditions to uncover the truth behind extraterrestrial encounters.', 'Enigmatic Extraterrestrial Expeditions', 'Mature', '7:30pm', '2023-12-31');
+
+INSERT INTO Channel(channel_ID,program_ID, short_description, program_name, audience_rating, show_time,release_date)
+VALUES ('8c', 'warner','Reveal the hidden secrets and supernatural mysteries that defy explanation.', 'Supernatural Secrets Showcase', 'Mature', '4:00pm', '2023-12-31');
+
+INSERT INTO Channel(channel_ID,program_ID, short_description, program_name, audience_rating, show_time,release_date)
+VALUES ('8d','warner', 'Unlock the mysteries of ancient manuscripts and cryptic writings.', 'Mystery Manuscripts Masterclass', 'Parerntal Guidance', '9:45am', '2023-12-31');
+
+INSERT INTO Channel(channel_ID,program_ID, short_description, program_name, audience_rating, show_time,release_date)
+VALUES ('9a','nbc', 'Experience heart-pounding action with Extreme Sports Extravaganza.', 'Extreme Sports Extravaganza', 'Mature', '1:30pm', '2023-12-31');
+
+INSERT INTO Channel(channel_ID,program_ID, short_description, program_name, audience_rating, show_time,release_date)
+VALUES ('9b','nbc', 'Dive into fictional football tales and legendary matchups on Fantastical Football Fables.', 'Fantastical Football Fables', 'kids', '5:45pm', '2023-12-31');
+
+INSERT INTO Channel(channel_ID,program_ID, short_description, program_name, audience_rating, show_time,release_date)
+VALUES ('9c','nbc', 'Witness incredible feats and mythical martial arts in Mythical Martial Arts Mayhem.', 'Mythical Martial Arts Mayhem', 'Parerntal Guidance', '3:00pm', '2023-12-31');
+
+INSERT INTO Channel(channel_ID,program_ID, short_description, program_name, audience_rating, show_time,release_date)
+VALUES ('9d','nbc', 'Explore the legendary stories and iconic moments of football on Legends of the Gridiron.', 'Legends of the Gridiron', 'Mature', '8:15pm', '2023-12-31');
+
+INSERT INTO Channel(channel_ID,program_ID, short_description, program_name, audience_rating, show_time,release_date)
+VALUES ('10a','abc', 'Experience otherworldly golf tournaments with Galactic Golf Galore.', 'Galactic Golf Galore', 'Mature', '2:45pm', '2023-12-31');
+
+INSERT INTO Channel(channel_ID,program_ID, short_description, program_name, audience_rating, show_time,release_date)
+VALUES ('10b','abc', 'Witness gravity-defying dunks and basketball magic on Slam Dunk Spectacular.', 'Slam Dunk Spectacular', 'Parerntal Guidance', '6:30pm', '2023-12-31');
+
+INSERT INTO Channel(channel_ID,program_ID, short_description, program_name, audience_rating, show_time,release_date)
+VALUES ('10c','abc', 'Explore intergalactic cricket matches and out-of-this-world plays on Cosmic Cricket Chronicles.', 'Cosmic Cricket Chronicles', 'Mature', '4:15pm', '2023-12-31');
+
+INSERT INTO Channel(channel_ID,program_ID, short_description, program_name, audience_rating, show_time,release_date)
+VALUES ('10d','abc', 'Dive into the fantastical world of ultimate frisbee on Unreal Ultimate Frisbee Universe.', 'Unreal Ultimate Frisbee Universe', 'kids', '9:00am', '2023-12-31');
+
+-- ChannelPackage
+INSERT INTO ChannelPackage (Channel_ID, Package_ID, Program_ID, Program_Name, show_time)
+VALUES ('1a', '1', 'nbc0', 'Starry wars the trilogy', '1:00am');
+
+INSERT INTO ChannelPackage (Channel_ID, Package_ID, Program_ID, Program_Name, show_time)
+VALUES ('1b', '2', 'nbc1', 'Gomer Piles the Hero', '5:30am');
+
+INSERT INTO ChannelPackage (Channel_ID, Package_ID, Program_ID, Program_Name, show_time)
+VALUES ('1c', '3', 'nbc2', 'Twinkle Toes in Paris', '2:00pm');
+
+INSERT INTO ChannelPackage (Channel_ID, Package_ID, Program_ID, Program_Name, show_time)
+VALUES ('1d', '4', 'nbc3', 'Segall in New York', '5:00pm');
+
+INSERT INTO ChannelPackage (Channel_ID, Package_ID, Program_ID, Program_Name, show_time)
+VALUES ('2a', '1', 'abc1', 'Fantasia', '1:55am');
+
+INSERT INTO ChannelPackage (Channel_ID, Package_ID, Program_ID, Program_Name, show_time)
+VALUES ('2b', '3', 'abc2', 'Dances with Fairies', '4:30am');
+
+INSERT INTO ChannelPackage (Channel_ID, Package_ID, Program_ID, Program_Name, show_time)
+VALUES ('2c', '4', 'abc3', 'Speed 34', '8:30pm');
+
+INSERT INTO ChannelPackage (Channel_ID, Package_ID, Program_ID, Program_Name, show_time)
+VALUES ('2d', '1', 'abc4', 'Prettier Women', '11:30pm');
+
+INSERT INTO ChannelPackage (Channel_ID, Package_ID, Program_ID, Program_Name, show_time)
+VALUES ('3a', '1', 'fox1', 'Unreal News tonight', '1:30am');
+
+INSERT INTO ChannelPackage (Channel_ID, Package_ID, Program_ID, Program_Name, show_time)
+VALUES ('3b', '2', 'fox2', 'SpecSphere live', '6:30am');
+
+INSERT INTO ChannelPackage (Channel_ID, Package_ID, Program_ID, Program_Name, show_time)
+VALUES ('3c', '3', 'fox3', 'Twist and Turn', '7:00pm');
+
+INSERT INTO ChannelPackage (Channel_ID, Package_ID, Program_ID, Program_Name, show_time)
+VALUES ('3d', '4', 'fox4', 'Questionable Insights', '11:00pm');
+
+INSERT INTO ChannelPackage (Channel_ID, Package_ID, Program_ID, Program_Name, show_time)
+VALUES ('4a', '2', 'warner1', 'Beyond Belief Bulletin', '3:45pm');
+
+INSERT INTO ChannelPackage (Channel_ID, Package_ID, Program_ID, Program_Name, show_time)
+VALUES ('4b', '4', 'warner2', 'Reality Remix', '9:15am');
+
+INSERT INTO ChannelPackage (Channel_ID, Package_ID, Program_ID, Program_Name, show_time)
+VALUES ('4c', '2', 'warner3', 'Fables Unveiled tonight', '5:20pm');
+
+INSERT INTO ChannelPackage (Channel_ID, Package_ID, Program_ID, Program_Name, show_time)
+VALUES ('4d', '4', 'warner4', 'Questionable Quotient', '8:40pm');
+
+INSERT INTO ChannelPackage (Channel_ID, Package_ID, Program_ID, Program_Name, show_time)
+VALUES ('5a', '4', 'nbc4', 'GlamourGossip', '2:45pm');
+
+INSERT INTO ChannelPackage (Channel_ID, Package_ID, Program_ID, Program_Name, show_time)
+VALUES ('5b', '4', 'nbc5', 'Escapades Extravaganza', '6:45am');
+
+INSERT INTO ChannelPackage (Channel_ID, Package_ID, Program_ID, Program_Name, show_time)
+VALUES ('5c', '4', 'nbc6', 'AdventureChic ', '4:30pm');
+
+INSERT INTO ChannelPackage (Channel_ID, Package_ID, Program_ID, Program_Name, show_time)
+VALUES ('5d', '4', 'nbc7', 'LuxeLiving Legends', '9:00pm');
+
+INSERT INTO ChannelPackage (Channel_ID, Package_ID, Program_ID, Program_Name, show_time)
+VALUES ('6a', '1', 'abc5', 'Chic Retreats ', '2:00pm');
+
+INSERT INTO ChannelPackage (Channel_ID, Package_ID, Program_ID, Program_Name, show_time)
+VALUES ('6b', '2', 'abc6', 'Gourment Grandeur ', '5:30am');
+
+INSERT INTO ChannelPackage (Channel_ID, Package_ID, Program_ID, Program_Name, show_time)
+VALUES ('6c', '3', 'abc7', 'Urban Odyssey', '4:45pm');
+
+INSERT INTO ChannelPackage (Channel_ID, Package_ID, Program_ID, Program_Name, show_time)
+VALUES ('6d', '4', 'abc8', 'CelebStyle', '9:15pm');
+
+INSERT INTO ChannelPackage (Channel_ID, Package_ID, Program_ID, Program_Name, show_time)
+VALUES ('7a', '1', 'fox5', 'CryptoConspiracies Chronicles', '11:45am');
+
+INSERT INTO ChannelPackage (Channel_ID, Package_ID, Program_ID, Program_Name, show_time)
+VALUES ('7b', '2', 'fox6', 'Alien Antics Archives', '1:45pm');
+
+INSERT INTO ChannelPackage (Channel_ID, Package_ID, Program_ID, Program_Name, show_time)
+VALUES ('7c', '3', 'fox7', 'Ancient Wonders Whodunnit', '3:15pm');
+
+INSERT INTO ChannelPackage (Channel_ID, Package_ID, Program_ID, Program_Name, show_time)
+VALUES ('7d', '4', 'fox8', 'Time-Traveler Tales', '6:00pm');
+
+INSERT INTO ChannelPackage (Channel_ID, Package_ID, Program_ID, Program_Name, show_time)
+VALUES ('8a', '3', 'warner5', 'Urban Legends Unleashed', '2:15pm');
+
+INSERT INTO ChannelPackage (Channel_ID, Package_ID, Program_ID, Program_Name, show_time)
+VALUES ('8b', '4', 'warner6', 'Enigmatic Extraterrestrial Expeditions', '7:30pm');
+
+INSERT INTO ChannelPackage (Channel_ID, Package_ID, Program_ID, Program_Name, show_time)
+VALUES ('8c', '3', 'warner7', 'Supernatural Secrets Showcase', '4:00pm');
+
+INSERT INTO ChannelPackage (Channel_ID, Package_ID, Program_ID, Program_Name, show_time)
+VALUES ('8d', '4', 'warner8', 'Mystery Manuscripts Masterclass', '9:45am');
+
+INSERT INTO ChannelPackage (Channel_ID, Package_ID, Program_ID, Program_Name, show_time)
+VALUES ('9a', '2', 'nbc8', 'Extreme Sports Extravaganza', '1:30pm');
+
+INSERT INTO ChannelPackage (Channel_ID, Package_ID, Program_ID, Program_Name, show_time)
+VALUES ('9b', '1', 'nbc9', 'Fantastical Football Fables', '5:45pm');
+
+INSERT INTO ChannelPackage (Channel_ID, Package_ID, Program_ID, Program_Name, show_time)
+VALUES ('9c', '3', 'nbc10', 'Mythical Martial Arts Mayhem', '3:00pm');
+
+INSERT INTO ChannelPackage (Channel_ID, Package_ID, Program_ID, Program_Name, show_time)
+VALUES ('9d', '4', 'nbc11', 'Legends of the Gridiron', '8:15pm');
+
+INSERT INTO ChannelPackage (Channel_ID, Package_ID, Program_ID, Program_Name, show_time)
+VALUES ('10a', '4', 'abc1', 'Galactic Golf Galore', '2:45pm');
+
+INSERT INTO ChannelPackage (Channel_ID, Package_ID, Program_ID, Program_Name, show_time)
+VALUES ('10b', '4', 'abc2', 'Slam Dunk Spectacular', '6:30pm');
+
+INSERT INTO ChannelPackage (Channel_ID, Package_ID, Program_ID, Program_Name, show_time)
+VALUES ('10c', '3', 'abc3', 'Cosmic Cricket Chronicles', '4:15pm');
+
+INSERT INTO ChannelPackage (Channel_ID, Package_ID, Program_ID, Program_Name, show_time)
+VALUES ('10d', '3', 'abc4', 'Unreal Ultimate Frisbee Universe', '9:00am');
