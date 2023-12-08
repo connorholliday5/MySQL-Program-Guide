@@ -1,0 +1,113 @@
+DROP DATABASE IF EXISTS project;
+
+CREATE DATABASE project;
+
+USE project;
+DROP table IF EXISTS Customer;
+CREATE TABLE CUSTOMER
+(CUSTOMER_ID VARCHAR(3) PRIMARY KEY,
+CUSTOMER_NAME VARCHAR(35) NOT NULL,
+package_ID VARChar(15) NOT NULL,
+STREET VARCHAR(15),
+CITY VARCHAR(15),
+STATE VARCHAR(2),
+ZIP VARCHAR(5),
+STATUS ENUM('active', 'inactive') NOT NULL,
+Fav_channel Varchar(50)
+ );
+
+DROP table IF EXISTS Package;
+CREATE TABLE Package
+(Package_ID VARCHAR(15) PRIMARY KEY,
+Package_name VARCHAR(50),
+Channel_num VARCHAR(50),
+Type varchar(100),
+Package_sold int,
+PRICE DECIMAL(6,2) );
+
+DROP table IF EXISTS Channel;
+CREATE TABLE CHANNEL
+(channel_ID VARchar(4) PRIMARY KEY,
+Program_ID VARchar(20),
+short_description VARCHAR(100),
+program_name VARCHAR(50),
+audience_rating VARchar(50),
+show_time VARchar(20),
+release_date DATE
+);
+
+DROP table IF EXISTS Network;
+CREATE TABLE Network
+(Network_ID VARCHAR(20) PRIMARY KEY,
+Network_address VARCHAR(50),
+contact_person VARCHAR(20),
+contact_phone VARchar(20)
+);
+DROP TABLE IF EXISTS ChannelNetwork;
+CREATE TABLE ChannelNetwork (
+    Channel_ID VARCHAR(4),
+    Program_ID VARCHAR(20),
+    short_description VARCHAR(100),
+    program_name VARCHAR(50),
+    audience_rating VARCHAR(50),
+    show_time VARCHAR(20),
+    release_date DATE,
+    Network_ID VARCHAR(20),
+    Network_address VARCHAR(50),
+    contact_person VARCHAR(20),
+    contact_phone VARCHAR(20),
+    PRIMARY KEY (Channel_ID),
+    FOREIGN KEY (Network_ID) REFERENCES Network(Network_ID)
+);
+
+DROP table IF EXISTS Program_List;
+CREATE TABLE Program_list
+(Program_ID VARchar(20) primary key,
+short_description VARCHAR(100),
+program_name VARCHAR(100),
+rating_code VARchar(25),
+length VARchar(4),
+channel_type char(100),
+release_date DATE
+);
+
+DROP table IF EXISTS Billing;
+CREATE TABLE BILLING (
+    BILLING_ID INT AUTO_INCREMENT PRIMARY KEY,
+    CUSTOMER_ID VARCHAR(3),
+    Package_ID VARCHAR(15),
+    BILLING_DATE DATE NOT NULL,
+    AMOUNT DECIMAL(10, 2) NOT NULL,
+    sign_up date,
+    STATUS ENUM('active', 'inactive') NOT NULL,
+    FOREIGN KEY (CUSTOMER_ID) REFERENCES CUSTOMER(CUSTOMER_ID)
+);
+
+
+
+/* Combining package and Channel tables */
+-- Create a new table that combines Channel_ID and Package_ID
+DROP table IF EXISTS ChannelPackage;
+CREATE TABLE ChannelPackage (
+    Channel_ID VARCHAR(4),
+    Package_ID VARCHAR(15),
+    show_time VARchar(20),
+    Program_ID Varchar(20),
+    program_name VARCHAR(50),
+    PRIMARY KEY (Channel_ID, Package_ID),
+    FOREIGN KEY (Channel_ID) REFERENCES CHANNEL(channel_ID),
+    FOREIGN KEY (Package_ID) REFERENCES Package(Package_ID)
+);
+
+
+/* Combining Network and Program tables */
+-- Create a new table that combines Package_Id and Network_Id
+DROP table IF EXISTS PackageNetwork;
+CREATE TABLE PackageNetwork (
+    Package_Id VARCHAR(15),
+    Network_Id VARCHAR(20),
+    PRIMARY KEY (Package_Id, Network_Id),
+    FOREIGN KEY (Package_Id) REFERENCES Package(Package_ID),
+    FOREIGN KEY (Network_Id) REFERENCES Network(Network_ID)
+);
+
