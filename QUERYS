@@ -1,0 +1,99 @@
+-- UPDATE STATEMENTS
+SET SQL_SAFE_UPDATES = 0;
+UPDATE CUSTOMER
+SET STATUS = 'Inactive'
+WHERE CUSTOMER_ID IN (
+    SELECT c.CUSTOMER_ID
+    FROM CUSTOMER c
+    JOIN BILLING b ON c.CUSTOMER_ID = b.CUSTOMER_ID
+    WHERE b.BILLING_DATE < (CURRENT_DATE - INTERVAL 30 DAY) AND b.STATUS = 'ACTIVE'
+);
+
+
+/* REPORTING STATEMENTS */
+/* Report 1*/
+
+SELECT cp.channel_ID, cp.Program_ID, cp.Package_ID, pl.program_name, pl.rating_code, cp.show_time, pl.release_date
+FROM ChannelPackage cp
+JOIN Program_List pl ON cp.Program_ID = pl.Program_ID
+WHERE pl.release_date = '2023-12-31';
+
+    
+    /* Report 2*/
+    
+    SELECT cp.channel_ID, cp.show_time, pl.program_name, ch.short_description
+FROM ChannelPackage cp
+JOIN Program_List pl ON cp.Program_ID = pl.Program_ID
+JOIN Channel ch ON cp.channel_ID = ch.channel_ID
+WHERE cp.Package_ID = '1';
+
+    
+    /* Report 3*/
+
+SELECT
+    c.CUSTOMER_ID,
+    c.CUSTOMER_NAME,
+    c.Fav_channel,
+    c.STREET,
+    c.CITY,
+    c.STATE,
+    c.ZIP,
+    b.sign_up,
+    b.BILLING_DATE,
+    b.AMOUNT,
+    b.STATUS
+FROM
+    CUSTOMER c
+JOIN
+    BILLING b ON c.CUSTOMER_ID = b.CUSTOMER_ID
+WHERE
+    b.sign_up = '2023-12-01';
+    
+    /* Report 4*/
+SELECT
+    c.CUSTOMER_ID,
+    c.CUSTOMER_NAME,
+    c.STREET,
+    c.CITY,
+    c.STATE,
+    c.ZIP,
+    b.STATUS AS Current_Status,
+    'active' AS Previous_Status,
+    b.BILLING_DATE AS Inactivation_Date,
+    'Contact Customer Service' AS Inactivation_Reason,
+    'Provider' AS User_Who_Made_Inactive
+FROM
+    CUSTOMER c
+JOIN
+    BILLING b ON c.CUSTOMER_ID = b.CUSTOMER_ID
+WHERE
+    b.STATUS = 'inactive'
+    AND b.BILLING_DATE = '2023-01-01';
+    
+    /* Report 5*/
+    
+    SELECT
+    C.channel_ID,
+    C.Program_ID,
+    COUNT(DISTINCT Cu.CUSTOMER_ID) AS FavoriteChannel
+FROM
+    CHANNEL C
+LEFT JOIN
+    CUSTOMER Cu ON C.channel_ID = Cu.Fav_channel
+GROUP BY
+    C.channel_ID, C.Program_ID;
+    
+    /* Report 6*/
+
+SELECT
+    p.Package_ID,
+    p.Type AS Package_Type,
+    p.PRICE AS Package_Price,
+    SUM(Package_sold) AS Total_Packages_Sold,
+   SUM(package_sold) * p.Price AS Total_Sales_Amount
+FROM
+    Package p
+LEFT JOIN
+    CUSTOMER c ON p.Package_ID = c.package_ID
+GROUP BY
+    p.Package_ID, p.Type, p.PRICE;
